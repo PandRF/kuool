@@ -1,0 +1,78 @@
+Config file location
+    --global          使用全局配置文件			 use global config file
+    --system          使用系统配置文件			 use system config file
+    --local           使用存储库配置文件			 use repository config file
+    -f, --file <file> 使用给定的配置文件			 use given config file
+    --blob <blob-id>  从给定blob对象读取配置			 read config from given blob object
+
+Action
+    --get             获取值:name[value - regex]			 get value: name [value-regex]
+    --get-all         获取所有值:key[value - regex]			 get all values: key [value-regex]
+    --get-regexp      获取regexp的值:name - regex[value - regex]			 get values for regexp: name-regex [value-regex]
+    --get-urlmatch    获取URL的特定值:section[。var)URL			 get value specific for the URL: section[.var] URL
+    --replace-all     替换所有匹配的变量:name value[value_regex]			 replace all matching variables: name value [value_regex]
+    --add             添加一个新变量:name值			 add a new variable: name value
+    --unset           删除变量:name[value - regex]			 remove a variable: name [value-regex]
+    --unset-all       删除所有匹配:name[value - regex]			 remove all matches: name [value-regex]
+    --rename-section  重命名节:旧名称新名称			 rename section: old-name new-name
+    --remove-section  删除一个部分:名称			 remove a section: name
+    -l, --list        列出所有			 list all
+    -e, --edit        打开一个编辑器			 open an editor
+    --get-color       找到配置的颜色:槽[默认]			 find the color configured: slot [default]
+    --get-colorbool   找到颜色设置:插槽[stdout is - tty]			 find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool            值是" true "或" false "			 value is "true" or "false"
+    --int             值是十进制数			 value is decimal number
+    --bool-or-int     value是- bool或int			 value is --bool or --int
+    --path            值是路径(文件或目录名)			 value is a path (file or directory name)
+
+Other
+    -z, --null        用NUL字节终止值			 terminate values with NUL byte
+    --name-only       仅显示变量名			 show variable names only
+    --includes        尊重包括查找的指令			 respect include directives on lookup
+    --show-origin     显示配置文件(文件、标准输入、blob、命令行)			 show origin of config (file, standard input, blob, command line)
+
+$ git --help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area(开始一个工作区域) (see also: git help tutorial)
+   clone     将存储库复制到新目录中
+   init      创建一个空的Git存储库，或者重新初始化现有的库
+
+work on the current change() (see also: git help everyday)
+   add      向索引添加文件内容
+   mv       移动或重命名文件、目录或符号链接
+   reset    将当前头重置到指定状态
+   rm       从工作树和索引中删除文件
+
+examine the history and state(检查历史和状态) (see also: git help revisions)
+   bisect    使用二进制搜索来找到引入bug的提交
+   grep      匹配模式的打印行
+   log       显示提交日志
+   show      显示各种类型的对象
+   status    显示工作树状态
+
+grow, mark and tweak your common history
+   branch    列出、创建或删除分支
+   checkout  切换分支或恢复工作树文件
+   commit    记录对存储库的更改
+   diff      显示提交、提交和工作树之间的更改，等等
+   merge     一起加入两个或更多的发展历史
+   rebase    重新应用于另一个基本技巧之上
+   tag       创建、列表、删除或验证与GPG签名的标记对象
+
+collaborate (see also: git help workflows)
+   fetch    从另一个存储库下载对象和refs
+   pull     从另一个库或本地分支获取并集成
+   push     与相关对象一起更新远程refs
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
